@@ -1,0 +1,21 @@
+<div id="modal-overlay">
+  <div id="modal">
+    <label for="title">Titre</label>
+    <input #title id="title" name="title" value="{{task.title}}"/>
+    <div class="validation-div">
+      <p *ngIf="!valid && title.value ===''">Ce champ est obligatoire</p>
+    </div>
+    <label for="description">Description</label>
+    <input #description id="description" name="description" value="{{task.description}}"/>
+    <div class="validation-div">
+      <p *ngIf="!valid && description.value ===''">Ce champ est obligatoire</p>
+    </div>
+    <div>
+      <button routerLink="">Annuler</button>
+      <button class="save-btn" (click)="save(title.value, description.value)">
+        Enregistrer
+        <img src="../../../../assets/images/check.svg" alt="check icon">
+      </button>
+    </div>
+  </div>
+</div>

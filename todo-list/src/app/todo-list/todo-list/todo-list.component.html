@@ -1,0 +1,13 @@
+<div id="todo-list">
+  <div id="top-menu">
+    <app-filter (taskEvent)="filterTasks($event)"></app-filter>
+    <button routerLink="create">
+      <img src="../../../../assets/images/plus.svg" alt="plus icon">
+    </button>
+
+  </div>
+  <app-task-list [tasks]="tasks"></app-task-list>
+
+</div>
+<router-outlet></router-outlet>
+

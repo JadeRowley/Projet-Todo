@@ -1,0 +1,28 @@
+#todo-list{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+button{
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background: white;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+#top-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 660px;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  gap: 20px;
+}
+

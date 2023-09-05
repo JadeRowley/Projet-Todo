@@ -1,0 +1,42 @@
+#filter{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+#filter > p{
+  margin: 0;
+}
+
+.status{
+  position: relative;
+  width: 100px;
+  padding: 5px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.status:hover{
+  filter: drop-shadow(0 4px 2px rgb(0 0 0 / 10%));
+}
+
+.selected{
+  border: 0.5px solid grey;
+}
+
+.doing{
+  color: #E8A700;
+}
+
+.waiting{
+  color: #FF6161;
+}
+
+.done{
+  color: #04BD00;
+}

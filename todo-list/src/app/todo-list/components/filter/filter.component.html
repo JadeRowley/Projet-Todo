@@ -1,0 +1,6 @@
+<div id="filter">
+  <p>Filtrer par :</p>
+  <div class="status doing" [ngClass]="selected === eStatus.DOING ? 'selected' : ''" (click)="filterTasks(eStatus.DOING)">En cours</div>
+  <div class="status waiting" [ngClass]="selected === eStatus.WAITING ? 'selected' : ''" (click)="filterTasks(eStatus.WAITING)">En attente</div>
+  <div class="status done" [ngClass]="selected === eStatus.DONE ? 'selected' : ''" (click)="filterTasks(eStatus.DONE)">Terminé</div>
+</div>

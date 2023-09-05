@@ -1,0 +1,16 @@
+<div class="task">
+  <div class="top">
+    <h1>{{task.title}}</h1>
+    <select #status class="status" [(ngModel)]="task.status" (change)="updateStatus(status.value)"
+      [ngClass]="task.status === eStatus.DOING ? 'doing' : task.status === eStatus.WAITING ? 'waiting' : task.status === eStatus.DONE ? 'done' : ''">
+      <option class="status doing" value="{{eStatus.DOING}}">En cours</option>
+      <option class="status waiting" value="{{eStatus.WAITING}}">En attente</option>
+      <option class="status done" value="{{eStatus.DONE}}">Terminé</option>
+    </select>
+  </div>
+  <p>{{task.description}}</p>
+  <div class="icons">
+    <img [routerLink]="['/update', task.id]" src="../../../../assets/images/pencil.svg" alt="edit icon">
+    <img (click)="deleteTask()" src="../../../../assets/images/trash.svg" alt="delete icon">
+  </div>
+</div>
