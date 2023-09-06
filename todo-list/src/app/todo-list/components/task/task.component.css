@@ -16,21 +16,27 @@
 }
 
 h1{
+  width: calc(100% - 150px);
   margin: 0;
   color: #1E1E1E;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
-
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 p{
+  width: calc(100% - 60px);
   margin: 0;
   color: #545F71;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
-
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .top{
@@ -54,6 +60,10 @@ p{
   outline: none;
 }
 
+.status:hover{
+  filter: drop-shadow(0 4px 2px rgb(0 0 0 / 10%));
+}
+
 .doing{
   color: #E8A700;
 }
@@ -68,7 +78,7 @@ p{
 
 .icons{
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: row;
   gap: 5px;
   bottom: 10%;
@@ -79,12 +89,9 @@ p{
   cursor: pointer;
 }
 
-.task:hover .icons{
-  display: flex;
+.icons >img:hover{
+  filter: drop-shadow(0 4px 2px rgb(0 0 0 / 15%));
 }
 
-.task:hover .status > img{
-  display: block;
-}
 
 

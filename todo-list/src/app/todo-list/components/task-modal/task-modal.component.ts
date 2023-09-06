@@ -22,13 +22,10 @@ export class TaskModalComponent{
     if(router.url.startsWith('/update')){
       let taskId: number;
       activatedRoute.params.subscribe(params => {
-        console.log(params['taskId'])
         taskId = +params['taskId'];
         this.task = taskService.getTask(taskId);
       })
     }
-
-    console.log(this.task)
   }
 
   save(titleValue: string, descriptionValue: string){
